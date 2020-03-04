@@ -1,21 +1,20 @@
 ---
 title: "Reading Group Spring 2020"
 collection: teaching
-type: "Graduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
+type: "Workshop"
+permalink: /teaching/2020-spring-teaching
+venue: "NTUA, CS Department"
 date: 2020-03-04
 location: "Athens, Greece"
 ---
 
 This is a description of a teaching experience. You can use markdown like any other post.
 
-Heading 1
+Week 1 (4 Mar 2020)
 ======
-title: Course 1
+Additive Combinatorics
 
-Heading 2
+Week 2 (Upcoming)
 ======
+Polynomial Method
 
-Heading 3
-======
