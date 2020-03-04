@@ -4,7 +4,7 @@ collection: teaching
 type: "Workshop"
 permalink: /teaching/2019-fall-teaching
 venue: "NTUA, CS Department"
-date: 2019
+date: 2019-10-1
 location: "Athens, Greece"
 ---
 
