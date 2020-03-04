@@ -1,5 +1,5 @@
 ---
-title: "Reading Group Summer 2020"
+title: "Reading Group Spring 2020"
 collection: teaching
 type: "Graduate course"
 permalink: /teaching/2014-spring-teaching-1
