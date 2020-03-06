@@ -1,5 +1,5 @@
 ---
-title: "Reading Group Fall 2020"
+title: "Reading Group Fall 2019"
 collection: teaching
 type: "Workshop"
 permalink: /teaching/2019-fall-teaching
