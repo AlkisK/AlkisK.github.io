@@ -1,5 +1,5 @@
 ---
-title: "Reading Group Fall 2019"
+title: "Reading Group Fall 2019 (FODS19)"
 collection: teaching
 type: "Workshop"
 permalink: /teaching/2019-fall-teaching
@@ -12,7 +12,10 @@ This is a description of a teaching experience. You can use markdown like any ot
 
 Week 1
 ======
-High-Dimensional Geometry
+Concentration Inequalities & High-Dimensional Geometry
+
+Sources: 
+== 
 
 Week 2
 ======
