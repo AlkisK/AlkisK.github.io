@@ -15,7 +15,7 @@ Week 1
 Concentration Inequalities & High-Dimensional Geometry
 
 Sources: 
-== 
+----
 
 Week 2
 ======
