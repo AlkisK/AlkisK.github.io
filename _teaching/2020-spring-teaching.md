@@ -10,8 +10,8 @@ location: "Athens, Greece"
 
 This is a description of a teaching experience. You can use markdown like any other post.
 
-### Week 1 (4 Mar 2020)
-
+### Week 1 
+###### 4 MAR 2020
 _Additive Combinatorics_
 
 Sources: SOON 
