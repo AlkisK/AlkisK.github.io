@@ -10,11 +10,19 @@ location: "Athens, Greece"
 
 This is a description of a teaching experience. You can use markdown like any other post.
 
-Week 1 (4 Mar 2020)
-======
-Additive Combinatorics
+### Week 1 (4 Mar 2020)
 
-Week 2 (Upcoming)
-======
-Polynomial Method
+_Additive Combinatorics_
+
+Sources: SOON 
+
+### Week 2 (Upcoming)
+
+_Polynomial Method_
+
+
+#### Additional Talk for Advanced Algorithms Course:
+
+_Spectral Graph Theory_
+
 
