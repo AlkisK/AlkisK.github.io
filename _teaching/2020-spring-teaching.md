@@ -18,13 +18,14 @@ _Additive Combinatorics_
   ... a rapidly developing and rather exciting area of mathematics. One major area of study in additive combinatorics are inverse problems: given the size of the sumset A + B is small, what can we say about the structures of A  and B? The methods used for tackling such questions often come from many different fields of mathematics, including combinatorics, ergodic theory, analysis, graph theory, group theory, and linear algebraic and polynomial methods.     
 </details>
 
+_Topics Discussed_:
 * Additive structure of sets
 * Sum-free sets
 * Erdos-Ginzburg-Ziv Theorem and Graph Coloring
 * Cauchy-Davenport Theorem
 * Uncertainty principle for Zp
     
-Sources: 
+_Sources_: 
 
 - [Additive Combinatorics, Tao-Vu](https://www.cambridge.org/core/books/additive-combinatorics/D408BA34B567974CC8FB0CEC2A49A807) 
 
