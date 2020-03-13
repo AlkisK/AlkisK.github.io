@@ -8,14 +8,14 @@ date: 2020-03-04
 location: "Athens, Greece"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+In this reading group (GIM20), we discuss about Great Ideas in Mathematics (with applications to theoretical computer science). We meet weekly on Wednesdays, between 1-3pm.
 
 ### Week 1 
 ###### 4 Mar 2020
 _Additive Combinatorics_
 <details>
-  <summary>  </summary>
-  Additive combinatorics is a rapidly developing and rather exciting area of mathematics. One major area of study in additive combinatorics are inverse problems: given the size of the sumset A + B is small, what can we say about the structures of A  and B? The methods used for tackling such questions often come from many different fields of mathematics, including combinatorics, ergodic theory, analysis, graph theory, group theory, and linear algebraic and polynomial methods.     
+  <summary> Additive Combinatorics is ... </summary>
+  ... a rapidly developing and rather exciting area of mathematics. One major area of study in additive combinatorics are inverse problems: given the size of the sumset A + B is small, what can we say about the structures of A  and B? The methods used for tackling such questions often come from many different fields of mathematics, including combinatorics, ergodic theory, analysis, graph theory, group theory, and linear algebraic and polynomial methods.     
 </details>
 
 * Additive structure of sets
