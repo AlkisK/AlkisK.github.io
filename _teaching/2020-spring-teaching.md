@@ -8,7 +8,7 @@ date: 2020-03-04
 location: "Athens, Greece"
 ---
 
-In this reading group (GIM20), we discuss about Great Ideas in Mathematics (with applications to theoretical computer science). We meet weekly on Wednesdays, between 1-3pm.
+In this reading group (GIM20), we discuss about Great Ideas in Mathematics (with applications in theoretical computer science). We meet weekly on Wednesdays, between 1-3pm.
 
 ### Week 1 
 ###### 4 Mar 2020
