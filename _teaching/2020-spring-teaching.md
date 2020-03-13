@@ -14,7 +14,7 @@ This is a description of a teaching experience. You can use markdown like any ot
 ###### 4 Mar 2020
 
 <details>
-  <summary>_Additive Combinatorics_</summary>
+  <summary> _Additive Combinatorics_ </summary>
   Additive combinatorics is a rapidly developing and rather exciting area of mathematics. One major area of study in additive combinatorics are inverse problems: given the size of the sumset A + B is small, what can we say about the structures of A  and B? The methods used for tackling such questions often come from many different fields of mathematics, including combinatorics, ergodic theory, analysis, graph theory, group theory, and linear algebraic and polynomial methods.     
 </details>
 
