@@ -12,15 +12,24 @@ This is a description of a teaching experience. You can use markdown like any ot
 
 ### Week 1 
 ###### 4 Mar 2020
-_Additive Combinatorics_
 
-- Additive structure of sets
-- Sum-free sets
-- Erdos-Ginzburg-Ziv Theorem and Graph Coloring
-- Cauchy-Davenport Theorem
-- Uncertainty principle for Zp
+<details>
+  <summary>_Additive Combinatorics_</summary>
+  Additive combinatorics is a rapidly developing and rather exciting area of mathematics. One major area of study in additive combinatorics are inverse problems: given the size of the sumset A + B is small, what can we say about the structures of A  and B? The methods used for tackling such questions often come from many different fields of mathematics, including combinatorics, ergodic theory, analysis, graph theory, group theory, and linear algebraic and polynomial methods.     
+</details>
 
-Sources: [Additive Combinatorics, Tao-Vu](https://www.cambridge.org/core/books/additive-combinatorics/D408BA34B567974CC8FB0CEC2A49A807) 
+* Additive structure of sets
+* Sum-free sets
+* Erdos-Ginzburg-Ziv Theorem and Graph Coloring
+* Cauchy-Davenport Theorem
+* Uncertainty principle for Zp
+    
+Sources: 
+
+- [Additive Combinatorics, Tao-Vu](https://www.cambridge.org/core/books/additive-combinatorics/D408BA34B567974CC8FB0CEC2A49A807) 
+
+- [Ben Green's Review on Tao-Vu's Additive Combinatorics](http://people.maths.ox.ac.uk/greenbj/papers/book-review.pdf)
+
 
 ### Week 2 (Upcoming)
 
