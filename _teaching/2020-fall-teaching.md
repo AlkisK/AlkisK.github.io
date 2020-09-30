@@ -23,8 +23,7 @@ _Sources_:
 ###### 30 Sep 2020 (Lecturer : Alkis Kalavasis)
 _Mixtures of Gaussians_: Disentangling Mixtures using Moments.
 
-_Notes:_
-<a href="AlkisK.github.io/_teaching/study-group-lec2_alkis_mixtures.pdf"target="_blank">PDF.</a>
+_Notes:_[PDF](https://github.com/AlkisK/AlkisK.github.io/edit/master/_teaching/study-group-lec2_alkis_mixtures.pdf)
 
 _Sources_: 
 
