@@ -12,7 +12,7 @@ In this reading group (GIM20), we discuss about fundamental problems in learning
 
 ### Week 1 
 ###### 23 Sep 2020 (Lecturer : Kostas Stavropoulos)
-_Mixtures of Gaussians_: Near-optimal Sample Complexity Bounds for Robust Learning of Gaussians Mixtures via Compression Schemes
+_Mixtures of Gaussians_: Near-optimal Sample Complexity Bounds for Robust Learning of Gaussians Mixtures via Compression Schemes.
 
 _Sources_: 
 
@@ -21,13 +21,16 @@ _Sources_:
 
 ### Week 2
 ###### 30 Sep 2020 (Lecturer : Alkis Kalavasis)
-_Mixtures of Gaussians_: Disentangling Mixtures
-  
+_Mixtures of Gaussians_: Disentangling Mixtures using Moments.
+
+_Notes:_
+<a href="-teaching/study-group-lec2_alkis_mixtures.pdf"></a>
+
 _Sources_: 
 
 - [Efficiently learning mixtures of two Gaussians, A.T. Kalai, A. Moitra, G. Valiant](http://people.csail.mit.edu/moitra/docs/2g-full.pdf) 
 
-- [Settling the Polynomial Learnability of Mixtures of Gaussians](https://arxiv.org/abs/1004.4223)
+- [Settling the Polynomial Learnability of Mixtures of Gaussians, A. Moitra, G. Valiant](https://arxiv.org/abs/1004.4223)
 
 
 ### Week 3 (Upcoming)
