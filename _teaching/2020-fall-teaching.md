@@ -24,7 +24,7 @@ _Sources_:
 _Mixtures of Gaussians_: Disentangling Mixtures using Moments.
 
 _Notes:_
-<a href="-teaching/study-group-lec2_alkis_mixtures.pdf"></a>
+<a href="AlkisK.github.io/_teaching/study-group-lec2_alkis_mixtures.pdf"target="_blank">PDF.</a>
 
 _Sources_: 
 
