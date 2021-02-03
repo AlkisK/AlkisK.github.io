@@ -34,10 +34,37 @@ _Sources_:
 
 ### Week 3 
 ###### 7 Oct 2020 (Lecturer : Alkis Kalavasis)
-_Topics_:
-* Mixtures of Rankings
-* Optimal Transport
+_Optimal Transport_
+
+_Notes:_ [PDF](https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/study-group-lec3_alkis_opt_transp.pdf)
 
 ### Week 4
+###### 14 Oct 2020 (Lecturer : Alkis Kalavasis)
+_Mallows Mixtures_
 
-  
+_Notes:_ [PDF](https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/study-group-lec4_alkis_mallows_mixt.pdf)
+
+### Week 5-7
+###### November 2020 (Lecturer : Argyris Mouzakis)
+_Differential Privacy_
+
+Sources:
+
+### Week 8
+###### December 2020 (Lecturer : Argyris Mouzakis)
+_Local Differential Privacy_
+
+Sources:
+
+### Week 9
+###### December 2020 (Lecturer : Alkis Kalavasis)
+_Polynomial Method_
+
+_Notes:_ [PDF](https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/study-group-lec5_alkis_polynomial_method(s).pdf)
+
+### Week 10
+###### 3 Feb 2021 (Lecturer : Alkis Kalavasis)
+_Introduction to Sum of Squares_
+
+_Notes:_ [PDF](https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/study-group-lec6_alkis_sos.pdf)
+ 
