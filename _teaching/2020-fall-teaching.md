@@ -48,11 +48,11 @@ _Notes:_ [PDF](https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/
 ###### November 2020 (Lecturer : Argyris Mouzakis)
 _Differential Privacy_
 
-_1) Concerning the topics we covered last week, I strongly recommend that you watch the following talks ([1](https://www.youtube.com/watch?v=RmXQ0LnsH90), [2](https://www.youtube.com/watch?v=2oLWHRNF_tM)).The 1st is about mean estimation, which we covered briefly, while the 2nd is about covariance estimation, which we covered in depth.A bit more broadly, you can check [this](https://arxiv.org/abs/2011.06202) for median estimation.
+1) Concerning the topics we covered last week, I strongly recommend that you watch the following talks ([1](https://www.youtube.com/watch?v=RmXQ0LnsH90), [2](https://www.youtube.com/watch?v=2oLWHRNF_tM)).The 1st is about mean estimation, which we covered briefly, while the 2nd is about covariance estimation, which we covered in depth.A bit more broadly, you can check [this](https://arxiv.org/abs/2011.06202) for median estimation.
 
-_2)  Concerning the topics we will cover tomorrow, you can check this [tutorial](http://www.cs.columbia.edu/~ccanonne/tutorial-focs2020/) for lower bounds and these papers ([1](https://arxiv.org/abs/1311.3158), [2](https://arxiv.org/abs/2004.06830)), as well as the following talks about testing ([1](https://www.youtube.com/watch?v=xrx2HKqcoV8) + [paper](https://arxiv.org/abs/1811.11148), [2](https://www.youtube.com/watch?v=_yXCHRkUMsY)).
+2)  Concerning the topics we will cover tomorrow, you can check this [tutorial](http://www.cs.columbia.edu/~ccanonne/tutorial-focs2020/) for lower bounds and these papers ([1](https://arxiv.org/abs/1311.3158), [2](https://arxiv.org/abs/2004.06830)), as well as the following talks about testing ([1](https://www.youtube.com/watch?v=xrx2HKqcoV8) + [paper](https://arxiv.org/abs/1811.11148), [2](https://www.youtube.com/watch?v=_yXCHRkUMsY)).
 
-_3) Regardless of everything we've covered, there's this [talk](https://www.youtube.com/watch?v=14SwC1ewYBc), which is the most detailed presentation you'll find related to the privacy paper that won one of this year's best paper awards at [focs](https://focs2020.cs.duke.edu/awards/).
+3) Regardless of everything we've covered, there's this [talk](https://www.youtube.com/watch?v=14SwC1ewYBc), which is the most detailed presentation you'll find related to the privacy paper that won one of this year's best paper awards at [focs](https://focs2020.cs.duke.edu/awards/).
 
 
 ### Week 8
