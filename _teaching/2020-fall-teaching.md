@@ -68,6 +68,12 @@ _Polynomial Method_
 _Notes:_ [PDF](https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/study-group-lec5_alkis_polynomial_method(s).pdf)
 
 ### Week 10
+###### December 2020 (Lecturer : Thanasis Pittas)
+_Statistical Queries_
+
+_Sources:_ [SQ Survey](https://arxiv.org/pdf/2004.00557.pdf)
+
+### Week 11
 ###### 3 Feb 2021 (Lecturer : Alkis Kalavasis)
 _Introduction to Sum of Squares_
 
