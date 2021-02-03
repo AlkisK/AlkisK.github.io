@@ -32,11 +32,12 @@ _Sources_:
 - [Settling the Polynomial Learnability of Mixtures of Gaussians, A. Moitra, G. Valiant](https://arxiv.org/abs/1004.4223)
 
 
-### Week 3 (Upcoming)
+### Week 3 
 ###### 7 Oct 2020 (Lecturer : Alkis Kalavasis)
 _Topics_:
 * Mixtures of Rankings
 * Optimal Transport
 
+### Week 4
 
   
