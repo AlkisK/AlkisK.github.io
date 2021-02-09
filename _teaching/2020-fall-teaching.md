@@ -62,18 +62,22 @@ _Local Differential Privacy_
 Sources: [Local Privacy, Data Processing Inequalities, and Minimax Rates, Duchi etal](https://arxiv.org/pdf/1302.3203.pdf)
 
 ### Week 9
+###### December 2020 (Lecturer : Alkiviadis Mertzios)
+_Prophet Inequalities_
+
+### Week 10
 ###### December 2020 (Lecturer : Alkis Kalavasis)
 _Polynomial Method_
 
 _Notes:_ [PDF](https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/study-group-lec5_alkis_polynomial_method(s).pdf)
 
-### Week 10
+### Week 11
 ###### December 2020 (Lecturer : Thanasis Pittas)
 _Statistical Queries_
 
 _Sources:_ [SQ Survey](https://arxiv.org/pdf/2004.00557.pdf)
 
-### Week 11
+### Week 12
 ###### 3 Feb 2021 (Lecturer : Alkis Kalavasis)
 _Introduction to Sum of Squares_
 
