@@ -24,10 +24,6 @@
   color: #fff;
 }
 
-/* Add hover effect to links */
-.navbar a:hover {
-  color: #ff5733;
-}
 
 /* Style your main content */
 .container {
