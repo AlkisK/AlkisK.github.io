@@ -1,0 +1,43 @@
+/* styles.css */
+
+/* Add a background image to the hero section */
+.hero-section {
+  background-image: url('hero-background.jpg');
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+/* Style your name in the hero section */
+.hero-name {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+/* Style the navigation bar */
+.navbar {
+  background-color: #333;
+}
+
+.navbar a {
+  color: #fff;
+}
+
+/* Add hover effect to links */
+.navbar a:hover {
+  color: #ff5733;
+}
+
+/* Style your main content */
+.container {
+  padding: 20px;
+}
+
+/* Add a stylish footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
