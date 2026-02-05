@@ -400,9 +400,23 @@
         <h2 id="pubs-title" class="section-title" >
           <i class="fas fa-book-open"></i> Recent Publications
         </h2>
-    
+
+        
         <ul class="publication-list" style="list-style: none; padding-left: 0;">
           <!-- Selected papers -->
+
+           <li class="publication-item">
+            <div class="publication-title">
+              <a href="https://arxiv.org/pdf/2601.05157" target="_blank" rel="noopener noreferrer">
+                Learning Mixture Models via Efficient High-dimensional Sparse Fourier Transforms
+              </a>
+              <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">STOC 2026</span>
+            </div>
+            <div class="publication-authors">
+              with Pravesh Kothari, Shuchen Li and Manolis Zampetakis
+            </div>
+          </li>
+          
           <li class="publication-item" style="display: flex; flex-direction: column;">
             <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
               <div>
@@ -447,7 +461,13 @@
             </div>
           </li>
 
-        <li class="publication-item">
+       
+      </ul>
+    
+        <!-- Hidden full list -->
+        <div id="all-pubs" style="display: none;">
+          <ul class="publication-list" style="list-style: none; padding-left: 0; margin-top: 1rem;">
+             <li class="publication-item">
           <div class="publication-title">
             <a href="https://dl.acm.org/doi/pdf/10.1145/3717823.3718250" target="_blank" rel="noopener noreferrer">Computational Lower Bounds for No-Regret Learning in Normal-Form Games
             </a>
@@ -457,11 +477,7 @@
             with Ioannis Anagnostides and Tuomas Sandholm
           </div>
         </li>
-      </ul>
-    
-        <!-- Hidden full list -->
-        <div id="all-pubs" style="display: none;">
-          <ul class="publication-list" style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            
             <li class="publication-item" style="display: flex; flex-direction: column;">
               <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
                 <a href="https://arxiv.org/pdf/2406.05660.pdf" target="_blank">Injecting Undetectable Backdoors in Obfuscated Neural Networks and Language Models</a>
