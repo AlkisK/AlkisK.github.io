@@ -274,11 +274,11 @@
             <span style="margin-left: 0.4rem;">Teaching</span>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link d-flex align-items-center" href="#talks">
             <span style="margin-left: 0.4rem;">Talks</span>
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link d-flex align-items-center" href="#service">
             <span style="margin-left: 0.4rem;">Service</span>
@@ -312,7 +312,7 @@
         ">📚 Google Scholar</a>
 
         <!-- News Box -->
-        <div style="
+        <!-- <div style="
           background-color: #e4fee1;
           border-left: 3px solid #390090;
           padding: 1rem;
@@ -330,7 +330,7 @@
             <li style="margin-bottom: 0.5rem;"><strong>🗓 April 2025:</strong> Completed my course on Stability in Machine Learning for Spring 2025. The lecture notes can be found <a href="https://docs.google.com/viewerng/viewer?url=https://raw.githubusercontent.com/AlkisK/AlkisK.github.io/master/_teaching/stability_notes.pdf">here</a> </li>
 
           </ul>
-        </div>
+        </div> -->
       </div>
   
       <!-- RIGHT COLUMN: Bio and Research -->
@@ -355,7 +355,7 @@
   
         <!-- Research Interests -->
         <div style="
-          background: #f0f5ff;
+          background: #fffdf6;
           border-radius: 12px;
           box-shadow: 0 4px 10px rgba(0,0,0,0.07);
           padding: 1rem 1.25rem;
@@ -364,27 +364,11 @@
           color: #111;
         ">
           <p style="margin-bottom: 0.75rem;">
-            I work on <strong><a style="color: #00356B;">statistical</a></strong> and <strong><a style="color: #00356B;">computational learning theory</a></strong>. My research focuses on the design of algorithms with rigorous guarantees for Machine Learning problems. I am particularly interested in:
-          </p>
-  
-          <ul style="padding-left: 1.5rem; margin-bottom: 0.75rem;">
-            <li style="margin-bottom: 0.5rem;">
-              <strong><a style="color: #00356B;">Learning from imperfect data:</a></strong> designing efficient algorithms that are robust to imperfect data for problems arising in Machine Learning and Econometrics with applications to Causal Inference.
-            </li>
-             <li style="margin-bottom: 0.5rem;">
-              <strong><a style="color: #00356B;">Generative modeling:</a></strong> proving rigorous guarantees for generative models, but also designing practical methods for diffusion and language models.
-            </li>
-            <li>
-              <strong><a style="color: #00356B;">Generalization and stability:</a></strong> understanding the generalization properties of algorithms and their stability to changes in the training data (replicability, privacy, memorization, learning curves).
-            </li>
-           
-          </ul>
+            I am interested in <strong><a style="color: #00356B;">machine learning theory</a></strong>,
+            especially its connections to causal inference, generative modeling, and theoretical computer science.
         </div>
   
        
-        <p style="font-weight: 1000; color: #111; margin: 1rem 0 0;">
-          I am on the 2025/26 job market. 
-        </p>
         Feel free to contact me at: alkis.kalavasis[at]yale.edu
       </div>
     </div>
@@ -404,7 +388,32 @@
         
         <ul class="publication-list" style="list-style: none; padding-left: 0;">
           <!-- Selected papers -->
+          
+          <li class="publication-item">
+        <div class="publication-title">
+          <a href="https://arxiv.org/pdf/2504.05161?" target="_blank" rel="noopener noreferrer">
+            DDPM Score Matching and Distribution Learning
+          </a>
+           <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">COLT 2026</span>
+        </div>
+        <div class="publication-authors">
+          with Sinho Chewi, Anay Mehrotra and Omar Montasser<br>
+          <span style="color: rgb(128, 0, 0); font-size: small; font-weight: bold; margin-left: auto;">Short Best Paper Award @ ICLR 2025 Workshop on Deep Generative Models in Machine Learning</span>
+        </div>
+      </li>
 
+          <li class="publication-item">
+        <div class="publication-title">
+          <a href="https://arxiv.org/pdf/2504.07133?" target="_blank" rel="noopener noreferrer">
+            Can SGD Select Good Fishermen? Local Convergence under Self-Selection Biases and Beyond
+          </a>
+          <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">COLT 2026</span>
+        </div>
+        <div class="publication-authors">
+          with Anay Mehrotra and Felix Zhou
+        </div>
+      </li>
+          
            <li class="publication-item">
             <div class="publication-title">
               <a href="https://arxiv.org/pdf/2601.05157" target="_blank" rel="noopener noreferrer">
@@ -472,17 +481,7 @@
             </div>
           </li>
 
-            <li class="publication-item">
-        <div class="publication-title">
-          <a href="https://arxiv.org/pdf/2504.05161?" target="_blank" rel="noopener noreferrer">
-            DDPM Score Matching and Distribution Learning
-          </a>
-        </div>
-        <div class="publication-authors">
-          with Sinho Chewi, Anay Mehrotra and Omar Montasser<br>
-          <span style="color: rgb(128, 0, 0); font-size: small; font-weight: bold; margin-left: auto;">Short Best Paper Award @ ICLR 2025 Workshop on Deep Generative Models in Machine Learning</span>
-        </div>
-      </li>
+            
 
     
           <li class="publication-item">
@@ -863,16 +862,7 @@
     </h2>
     <ul class="publication-list" style="list-style:none; padding-left: 0;">
     
-      <li class="publication-item">
-        <div class="publication-title">
-          <a href="https://arxiv.org/pdf/2504.07133?" target="_blank" rel="noopener noreferrer">
-            Can SGD Select Good Fishermen? Local Convergence under Self-Selection Biases and Beyond
-          </a>
-        </div>
-        <div class="publication-authors">
-          with Anay Mehrotra and Felix Zhou
-        </div>
-      </li>
+      
 
      
 
@@ -960,14 +950,14 @@
 
 
 <!--TALKS-->
-  <section class="py-5" id="talks">
+  <!-- <section class="py-5" id="talks">
     <div class="container">
       <h2 class="section-title">
         <i class="fas fa-microphone"></i> Recent Talks
       </h2>
   
       <!-- Talks Card -->
-      <div class="card shadow-sm p-4 mb-4" style="background-color: #f8f9fa; border-left: 5px solid #00356B;">
+      <!-- <div class="card shadow-sm p-4 mb-4" style="background-color: #f8f9fa; border-left: 5px solid #00356B;">
       
         <ul class="list-unstyled" style="line-height: 1.75;">
           
@@ -1010,7 +1000,7 @@
         </ul>
       </div>
     </div>
-  </section>
+  </section> --> 
    
 
   <!--Service-->
