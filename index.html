@@ -1,38 +1,34 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Alkis Kalavasis</title>
+<!-- Bootstrap 4 -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+<script defer="" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- Font Awesome for icons -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pbRjO1LB6zqfvX7C+8N4z45pHTSQG0NfHOk5QdsTU3J2vK3eyAZnmVzo7PqkEcjwTTzS6x5bBd1fpJ/Np+u1Mw==" referrerpolicy="no-referrer" rel="stylesheet">
+<!-- Style tweaks -->
+<style>
+    html, body, body *, body *::before, body *::after {
+      font-family: "Charis SIL", Charter, "Bitstream Charter", XCharter, Georgia, serif;
+    }
 
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-
-  <!-- Meta -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Alkis Kalavasis</title>
-
-  <!-- Bootstrap 4 -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Font Awesome for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-pbRjO1LB6zqfvX7C+8N4z45pHTSQG0NfHOk5QdsTU3J2vK3eyAZnmVzo7PqkEcjwTTzS6x5bBd1fpJ/Np+u1Mw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
-  <!-- Style tweaks -->
-  <style>
     body {
-      font-family: 'Lora', serif;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+
+    button, input, select, textarea, option, summary, code, pre, kbd, samp,
+    .btn, .navbar, .nav-link, .navbar-brand, .badge, .card, .publication-conf {
+      font-family: "Charis SIL", Charter, "Bitstream Charter", XCharter, Georgia, serif !important;
     }
   </style>
-
-
-
-  <style>
+<style>
 
     :root {
       --cream: #fffdf6;
@@ -45,11 +41,14 @@
     html {
       scroll-behavior: smooth;
     }
+
     body {
   background: linear-gradient(to bottom, #fff4d7, #f9f5ee);
-  font-family: 'Lora', serif;
+  font-family: "Charis SIL", Charter, "Bitstream Charter", XCharter, Georgia, serif;
   color: #111;
   padding-top: 80px;
+  font-size: 16.5px;
+  line-height: 1.55;
 }
     a {
       color: var(--link);
@@ -230,90 +229,637 @@
 }
 
   </style>
+<!-- Research overview redesign -->
+<style>
+    /* Keep the section heading visible below the fixed navbar. */
+    #research {
+      scroll-margin-top: 105px;
+      position: relative;
+      isolation: isolate;
+      margin-top: 4.5rem;
+      padding-top: 3.4rem !important;
+      padding-bottom: 3.6rem !important;
+      background:
+        radial-gradient(circle at 14% 0%, rgba(255, 255, 255, 0.34), transparent 40%),
+        linear-gradient(180deg, #fff7e3 0%, #fcf7ee 52%, #faf5ec 100%);
+      border-top: 1px solid rgba(180, 151, 103, 0.08);
+      border-bottom: 1px solid rgba(180, 151, 103, 0.08);
+    }
 
-  
-</head>
+    #research::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 1;
+      background: linear-gradient(90deg, transparent, rgba(167, 137, 91, 0.018), transparent);
+      mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+    }
 
+    .research-shell {
+      max-width: 1240px !important;
+      margin: 0 auto;
+    }
+
+    .research-intro {
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(31, 111, 139, 0.10);
+      border-radius: 22px;
+      box-shadow: 0 14px 38px rgba(42, 61, 70, 0.055);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 1.45rem 1.75rem;
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.68;
+    }
+
+    .research-intro::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #6f9cac 22%, #1f6f8b 50%, #6f9cac 78%, transparent);
+    }
+
+    .research-intro p {
+      max-width: 940px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .research-hint {
+      margin: 0 0 1.05rem;
+      text-align: center;
+      color: #6a665f;
+      font-family: "Charis SIL", Charter, "Bitstream Charter", XCharter, Georgia, serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* Six columns make the desktop layout exactly 3 cards + 2 cards. */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 1.15rem;
+      align-items: start;
+    }
+
+    .research-card {
+      --accent: #1f6f8b;
+      --accent-rgb: 31, 111, 139;
+      --accent-soft: #e8f4f8;
+      grid-column: span 2;
+      min-width: 0;
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.985), rgba(250, 252, 252, 0.965));
+      border: 1px solid rgba(31, 111, 139, 0.10);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(43, 61, 70, 0.065);
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+      transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(var(--accent-rgb), 0.42);
+      box-shadow: 0 18px 42px rgba(43, 61, 70, 0.13);
+    }
+
+    .research-card--missing,
+    .research-card--generative,
+    .research-card--physics {
+      height: 620px;
+    }
+
+    .research-card--theory,
+    .research-card--earlier {
+      height: 455px;
+    }
+
+    .research-card--missing,
+    .research-card--generative,
+    .research-card--physics,
+    .research-card--theory,
+    .research-card--earlier {
+      --accent: #1f6f8b;
+      --accent-rgb: 31, 111, 139;
+      --accent-soft: #edf5f7;
+    }
+
+    .research-card--theory,
+    .research-card--earlier {
+      grid-column: span 3;
+    }
+
+    .research-card-header {
+      position: relative;
+      padding: 1.3rem 1.25rem 1.1rem;
+      background:
+        linear-gradient(150deg, rgba(241, 247, 249, 0.66), rgba(255, 255, 255, 0.94) 68%),
+        linear-gradient(180deg, #fcfdfd, #f8fafb);
+      border-top: 3px solid rgba(var(--accent-rgb), 0.72);
+      border-bottom: 1px solid rgba(var(--accent-rgb), 0.08);
+    }
+
+    .research-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-bottom: 0.85rem;
+      text-align: center;
+    }
+
+
+    .research-card h3 {
+      width: 100%;
+      margin: 0;
+      color: #21343e;
+      font-size: 1.22rem;
+      line-height: 1.3;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: -0.012em;
+    }
+
+    .research-visual {
+      position: relative;
+      height: 132px;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      overflow: hidden;
+      color: var(--accent);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(243, 248, 249, 0.82));
+      border: 1px solid rgba(var(--accent-rgb), 0.14);
+      border-radius: 16px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.70);
+    }
+
+
+
+    .research-visual svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .research-card-motivation {
+      margin: 0;
+      color: #46545a;
+      font-size: 0.92rem;
+      line-height: 1.58;
+      text-align: center;
+    }
+
+    .research-question {
+      margin: 0.95rem 1rem 0.75rem;
+      padding: 0.8rem 0.85rem;
+      background: linear-gradient(135deg, rgba(241, 247, 249, 0.78), rgba(250, 252, 252, 0.96));
+      border-left: 3px solid rgba(var(--accent-rgb), 0.78);
+      border-radius: 12px;
+      color: #292925;
+      font-size: 0.89rem;
+      line-height: 1.45;
+    }
+
+    .research-question strong {
+      display: block;
+      margin-bottom: 0.2rem;
+      color: var(--accent);
+      font-size: 0.72rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .research-topics {
+      flex: 1 1 auto;
+      min-height: 0;
+      margin-top: 0;
+      padding: 0 0.75rem 1rem 1rem;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(var(--accent-rgb), 0.28) transparent;
+    }
+
+    .research-topics::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .research-topics::-webkit-scrollbar-thumb {
+      background: rgba(var(--accent-rgb), 0.24);
+      border-radius: 999px;
+    }
+
+    .research-topic {
+      border-top: 1px solid #ebe4d8;
+    }
+
+    .research-topic:last-child {
+      border-bottom: 1px solid #ebe4d8;
+    }
+
+    .research-topic summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.84rem 0.1rem;
+      color: #242421;
+      cursor: pointer;
+      font-size: 0.92rem;
+      font-weight: 700;
+      line-height: 1.3;
+      list-style: none;
+      transition: color 160ms ease;
+    }
+
+    .research-topic summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .research-topic summary:hover,
+    .research-topic[open] summary {
+      color: var(--accent);
+    }
+
+    .research-topic summary::after {
+      content: "+";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 1.45rem;
+      height: 1.45rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
+      font-family: "Charis SIL", Charter, "Bitstream Charter", XCharter, Georgia, serif;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: transform 180ms ease, background 180ms ease;
+    }
+
+    .research-topic[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .research-topic-content {
+      padding: 0 0.1rem 0.92rem;
+      color: #4b4b47;
+      font-size: 0.86rem;
+      line-height: 1.5;
+      animation: researchReveal 180ms ease-out;
+    }
+
+    .research-topic-content p {
+      margin: 0 0 0.7rem;
+    }
+
+    @keyframes researchReveal {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .research-paper-list {
+      display: grid;
+      gap: 0.55rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .research-paper-list li {
+      padding: 0.62rem 0.65rem;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(31, 111, 139, 0.12);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+    }
+
+    .research-paper-list a,
+    .research-paper-title {
+      color: #25384a;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .research-paper-list a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .research-venue {
+      display: inline-block;
+      margin-top: 0.35rem;
+      padding: 0.12rem 0.42rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
+      font-family: "Charis SIL", Charter, "Bitstream Charter", XCharter, Georgia, serif;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 1050px) {
+      .research-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .research-card,
+      .research-card--theory,
+      .research-card--earlier {
+        grid-column: span 1;
+      }
+
+      .research-card--earlier {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 650px) {
+      #research {
+        margin-top: 2.75rem;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .research-card,
+      .research-card--theory,
+      .research-card--earlier {
+        grid-column: 1;
+      }
+
+      .research-card--missing,
+      .research-card--generative,
+      .research-card--physics,
+      .research-card--theory,
+      .research-card--earlier {
+        height: auto;
+      }
+
+      .research-topics {
+        overflow-y: visible;
+        padding-right: 1rem;
+      }
+
+      .research-card:hover {
+        transform: none;
+      }
+
+      .research-intro {
+        padding: 1.15rem;
+      }
+
+      .research-visual {
+        height: 110px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .research-card,
+      .research-topic summary::after,
+      .research-topic-content {
+        transition: none;
+        animation: none;
+      }
+    }
+
+    #research .research-section-title {
+      color: #21343e;
+      font-size: 2.05rem;
+      letter-spacing: -0.018em;
+      text-align: center;
+    }
+
+    #research .research-section-title i {
+      color: #5f8796;
+    }
+
+  </style>
+</link><style>
+    /* Research overview usability update: papers are visible by default. */
+    #research .research-card--missing,
+    #research .research-card--generative,
+    #research .research-card--physics,
+    #research .research-card--theory,
+    #research .research-card--earlier {
+      height: auto;
+    }
+
+    #research .research-topics {
+      flex: 0 0 auto;
+      min-height: 0;
+      padding: 0 1rem 1.15rem;
+      overflow: visible;
+    }
+
+    #research .research-topic {
+      padding: 0.95rem 0 0.88rem;
+      border-top: 1px solid #e8e0d4;
+    }
+
+    #research .research-topic:first-child {
+      border-top: 0;
+      padding-top: 0.35rem;
+    }
+
+    #research .research-topic:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    #research .research-topic-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.55rem;
+    }
+
+    #research .research-topic-title {
+      margin: 0;
+      color: #00356B;
+      font-size: 0.92rem;
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: -0.005em;
+    }
+
+    #research .research-topic-count {
+      flex: 0 0 auto;
+      color: #827b70;
+      font-size: 0.72rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    #research .research-paper-list {
+      display: grid;
+      gap: 0.12rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #research .research-paper-list li {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-areas: "title venue";
+      align-items: start;
+      column-gap: 0.75rem;
+      row-gap: 0.25rem;
+      padding: 0.58rem 0.5rem;
+      background: transparent;
+      border: 0;
+      border-radius: 8px;
+      transition: background-color 150ms ease;
+    }
+
+    #research .research-paper-list li + li {
+      border-top: 1px solid rgba(31, 111, 139, 0.07);
+    }
+
+    #research .research-paper-list li:hover {
+      background: rgba(31, 111, 139, 0.045);
+    }
+
+    #research .research-paper-list a,
+    #research .research-paper-title {
+      grid-area: title;
+      min-width: 0;
+      color: #25384a;
+      font-size: 0.86rem;
+      line-height: 1.38;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    #research .research-paper-list a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    #research .research-venue {
+      grid-area: venue;
+      align-self: start;
+      display: inline-flex;
+      margin-top: 0.02rem;
+      padding: 0.12rem 0.42rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
+      font-size: 0.66rem;
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: 0.015em;
+      white-space: nowrap;
+    }
+
+    /* Existing markup has <br> before the venue; it is unnecessary in the grid. */
+    #research .research-paper-list li > br {
+      display: none;
+    }
+
+    @media (max-width: 650px) {
+      #research .research-topic-heading {
+        margin-bottom: 0.4rem;
+      }
+
+      #research .research-paper-list li {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "title"
+          "venue";
+        padding: 0.55rem 0.3rem;
+      }
+
+      #research .research-venue {
+        justify-self: start;
+      }
+    }
+</style></head>
 <body>
- <!-- NAVBAR -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" style="padding: 0.75rem 0;">
-  <div class="container">
-    <!-- Brand -->
-    <a class="navbar-brand fw-bold" href="#" style="font-size: 1.2rem; color: #00356B;">
+<div class="container">
+<!-- Brand -->
+<a class="navbar-brand fw-bold" href="#" style="font-size: 1.2rem; color: #00356B;">
       Alkis Kalavasis
     </a>
-
-    <!-- Mobile Toggler -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Nav Items -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto" style="gap: 0.5rem; display: flex; align-items: center;">
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#">
-            <span style="margin-left: 0.4rem;">Bio</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#publications">
-            <span style="margin-left: 0.4rem;">Publications</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#teaching">
-            <span style="margin-left: 0.4rem;">Teaching</span>
-          </a>
-        </li>
-        <!-- <li class="nav-item">
+<!-- Mobile Toggler -->
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Nav Items -->
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ml-auto" style="gap: 0.5rem; display: flex; align-items: center;">
+<li class="nav-item">
+<a class="nav-link d-flex align-items-center" href="#">
+<span style="margin-left: 0.4rem;">Bio</span>
+</a>
+</li>
+<li class="nav-item">
+<a aria-label="Go to Research Overview" class="nav-link d-flex align-items-center" href="#research">
+<span style="margin-left: 0.4rem;">Research</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link d-flex align-items-center" href="#publications">
+<span style="margin-left: 0.4rem;">Publications</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link d-flex align-items-center" href="#teaching">
+<span style="margin-left: 0.4rem;">Teaching</span>
+</a>
+</li>
+<!-- <li class="nav-item">
           <a class="nav-link d-flex align-items-center" href="#talks">
             <span style="margin-left: 0.4rem;">Talks</span>
           </a>
         </li> -->
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#service">
-            <span style="margin-left: 0.4rem;">Service</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
+<li class="nav-item">
+<a class="nav-link d-flex align-items-center" href="#service">
+<span style="margin-left: 0.4rem;">Service</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
 </nav>
-
-  <!-- BIO -->
- 
-  <section class="py-4" id="bio">
-    <div class="container d-flex flex-wrap" style="gap: 4rem; max-width: 1200px; margin: 0 auto; align-items: flex-start;">
-  
-      <!-- LEFT COLUMN: Photo + Scholar + News -->
-      <div style="display: flex; flex-direction: column; align-items: center; width: 300px; flex-shrink: 0;">
-        <!-- Profile Photo -->
-        <img
-          src="./photo.jpeg"
-          alt="Alkis Kalavasis"
-          style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; margin-bottom: 0.75rem;"
-        />
-  
-        <!-- Google Scholar -->
-        <a href="https://scholar.google.com/citations?user=NgVIFJwAAAAJ&hl" target="_blank" style="
+<!-- BIO -->
+<section class="py-4" id="bio">
+<div class="container d-flex flex-wrap" style="gap: 4rem; max-width: 1200px; margin: 0 auto; align-items: flex-start;">
+<!-- LEFT COLUMN: Photo + Scholar + News -->
+<div style="display: flex; flex-direction: column; align-items: center; width: 300px; flex-shrink: 0;">
+<!-- Profile Photo -->
+<img alt="Alkis Kalavasis" src="./photo.jpeg" style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; margin-bottom: 0.75rem;"/>
+<!-- Google Scholar -->
+<a href="https://scholar.google.com/citations?user=NgVIFJwAAAAJ&amp;hl" style="
           font-size: 0.95rem;
           color: #00356B;
           text-decoration: none;
           margin-bottom: 1.25rem;
-        ">Google Scholar</a>
-        <a color: #00356B;>E-mail: alkis.kalavasis[at]yale.edu</a>
-
-        <!-- News Box -->
-        <!-- <div style="
+        " target="_blank">Google Scholar</a>
+<a #00356b;="" color:="">E-mail: alkis.kalavasis[at]yale.edu</a>
+<!-- News Box -->
+<!-- <div style="
           background-color: #e4fee1;
           border-left: 3px solid #390090;
           padding: 1rem;
@@ -332,13 +878,11 @@
 
           </ul>
         </div> -->
-      </div>
-  
-      <!-- RIGHT COLUMN: Bio and Research -->
-      <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 1.25rem;">
-  
-        <!-- Bio Box -->
-        <div style="
+</div>
+<!-- RIGHT COLUMN: Bio and Research -->
+<div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 1.25rem;">
+<!-- Bio Box -->
+<div style="
           background: #fffdf6;
           border-radius: 12px;
           box-shadow: 0 4px 10px rgba(0,0,0,0.07);
@@ -347,15 +891,18 @@
           line-height: 1.4;
           color: #111;
         ">
-          <p style="margin-bottom: 0.75rem;">
-            I am an <a href="https://fds.yale.edu/people/#postdocs" target="_blank" style="color: #00356B;">FDS Postdoctoral Fellow</a> at Yale University. Before that, I was a PhD student in the Computer Science Department of the National Technical University of Athens (NTUA) working with 
-            <a href="http://www.softlab.ntua.gr/~fotakis/" target="_blank" style="color: #00356B;">Dimitris Fotakis</a> and 
-            <a href="https://tzamos.com/" target="_blank" style="color: #00356B;">Christos Tzamos</a>. I completed my undergraduate studies in the School of Electrical and Computer Engineering Department of the NTUA.
+<p style="margin-bottom: 0.75rem;">
+
+          I am a Postdoctoral Fellow in the Harvard John A. Paulson School of
+Engineering and Applied Sciences at Harvard University, hosted by <a href="https://sitanchen.com/ " style="color: #00356B;" target="_blank">Sitan Chen</a>.
+            Before that, I was an <a href="https://fds.yale.edu/people/#postdocs" style="color: #00356B;" target="_blank">FDS Postdoctoral Fellow</a> at Yale University. I obtained my PhD
+            in the Computer Science Department of the National Technical University of Athens (NTUA) working with
+            <a href="http://www.softlab.ntua.gr/~fotakis/" style="color: #00356B;" target="_blank">Dimitris Fotakis</a> and
+            <a href="https://tzamos.com/" style="color: #00356B;" target="_blank">Christos Tzamos</a>.
           </p>
-        </div>
-  
-        <!-- Research Interests -->
-        <div style="
+</div>
+<!-- Research Interests -->
+<div style="
           background: #fffdf6;
           border-radius: 12px;
           box-shadow: 0 4px 10px rgba(0,0,0,0.07);
@@ -364,425 +911,629 @@
           line-height: 1.4;
           color: #111;
         ">
-          <p style="margin-bottom: 0.75rem;">
-            I am interested in the <strong><a style="color: #00356B;">statistical and computational foundations of machine learning</a></strong>,
-          especially their connections to causal inference, generative modeling, and theoretical computer science.
+<p style="margin-bottom: 0.75rem;">
+        I am interested in the <strong><a style="color: #00356B;">statistical and computational foundations of machine learning</a></strong>,
+        especially their applications to causal inference and generative modeling as well as their connections to theoretical computer science
+        and statistical physics.
+        </p></div>
+</div>
+</div>
+</section>
+<section class="py-4" id="research">
+<div class="container research-shell">
+<h2 class="section-title research-section-title" id="research-title">
+<i class="fas fa-book-open"></i> Research Overview
+    </h2>
+<div class="research-intro">
+<p>
+        My research studies the statistical and computational foundations of
+        machine learning. I am currently mostly interested in their applications to causal inference,
+        generative modeling, and the study of computation in physical systems.
+
+        Below there is an overview of these research directions, along with some representative papers.
+      </p>
+</div>
+<div class="research-grid">
+<!-- Learning with Missing Data -->
+<article class="research-card research-card--missing">
+<header class="research-card-header">
+<div class="research-title-row">
+<h3>Learning with Missing Data</h3>
+</div>
+<p class="research-card-motivation">
+            Missing and selectively observed data arise throughout science in fields like biology,
+            economics, and the social sciences, inducing systematic bias in the statistical pipeline,
+            leading to incorrect conclusions and poor decision-making. 
+          </p><div aria-hidden="true" class="research-visual"><svg role="img" viewbox="0 0 320 120"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect height="90" opacity="0.42" rx="8" width="212" x="54" y="15"></rect><path d="M54 45h212M54 75h212M96 15v90M138 15v90M181 15v90M223 15v90" opacity="0.30"></path><g fill="currentColor" opacity="0.58" stroke="none"><rect height="14" rx="2" width="26" x="62" y="23"></rect><rect height="14" rx="2" width="26" x="104" y="53"></rect><rect height="14" rx="2" width="26" x="189" y="23"></rect><rect height="14" rx="2" width="26" x="231" y="83"></rect></g><g opacity="0.82"><path d="M148 52l23 16M171 52l-23 16"></path><path d="M62 82l26 16M88 82L62 98"></path><path d="M231 22l26 16M257 22l-26 16"></path></g></g></svg></div>
+</header>
+<div class="research-question">
+<strong>Main question</strong>
+          When is inference from missing data statistically and algorithmically possible?
         </div>
-
-      </div>
-    </div>
-  </section>
-  
-
-
- <!-- PUBLICATIONS -->
- <section class="py-5" id="publications">
-  <div class="container">
-    <section class="py-5" id="publications">
-      <div class="container">
-        <h2 id="pubs-title" class="section-title" >
-          <i class="fas fa-book-open"></i> Recent Papers
+<div class="research-topics">
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Truncated Statistics</h4>
+  </div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2602.12534" rel="noopener noreferrer" target="_blank">
+                    Linear Regression with Unknown Truncation Beyond Gaussian Features
+                  </a><br/>
+<span class="research-venue">ICML 2026</span>
+</li>
+</ul>
+</section>
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Statistics with Coarse Samples</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2108.09805.pdf" rel="noopener noreferrer" target="_blank">
+                    Efficient Algorithms for Learning from Coarse Labels
+                  </a><br/>
+<span class="research-venue">COLT 2021</span>
+</li>
+</ul>
+</section>
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Causal Inference</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2506.04194" rel="noopener noreferrer" target="_blank">
+                    What Makes Treatment Effects Identifiable? Characterizations and Estimators Beyond Unconfoundedness
+                  </a><br/>
+<span class="research-venue">COLT 2025</span>
+</li>
+</ul>
+</section>
+</div>
+</article>
+<!-- Foundations of Generative Modeling -->
+<article class="research-card research-card--generative">
+<header class="research-card-header">
+<div class="research-title-row">
+<h3>Foundations of Generative Modeling</h3>
+</div>
+<p class="research-card-motivation">
+            Generative models have amazing capabilities that span a wide range of applications including image and code generation, as well as mathematical reasoning.
+Their empirical success  therefore raises a fundamental theoretical question:
+          </p><div aria-hidden="true" class="research-visual"><svg aria-label="A neural network generating an image and a text sample" role="img" viewbox="0 0 360 140">
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+<g opacity="0.20" stroke-width="1.2">
+<path d="M28 30L88 22M28 30L88 54M28 30L88 86M28 70L88 22M28 70L88 54M28 70L88 86M28 110L88 54M28 110L88 86M28 110L88 118"></path>
+<path d="M88 22L148 38M88 22L148 70M88 54L148 38M88 54L148 70M88 54L148 102M88 86L148 38M88 86L148 70M88 86L148 102M88 118L148 70M88 118L148 102"></path>
+<path d="M148 38L198 70M148 70L198 70M148 102L198 70"></path>
+<path d="M198 70L222 40M198 70L222 101"></path>
+</g>
+<g fill="currentColor" stroke="none">
+<circle cx="28" cy="30" opacity="0.48" r="5"></circle>
+<circle cx="28" cy="70" opacity="0.66" r="5"></circle>
+<circle cx="28" cy="110" opacity="0.48" r="5"></circle>
+<circle cx="88" cy="22" opacity="0.44" r="5"></circle>
+<circle cx="88" cy="54" opacity="0.68" r="5"></circle>
+<circle cx="88" cy="86" opacity="0.68" r="5"></circle>
+<circle cx="88" cy="118" opacity="0.44" r="5"></circle>
+<circle cx="148" cy="38" opacity="0.58" r="6"></circle>
+<circle cx="148" cy="70" opacity="0.82" r="6"></circle>
+<circle cx="148" cy="102" opacity="0.58" r="6"></circle>
+<circle cx="198" cy="70" opacity="0.92" r="7"></circle>
+</g>
+<!-- Generated image -->
+<rect fill="#ffffff" fill-opacity="0.82" height="57" rx="10" stroke="currentColor" stroke-opacity="0.20" width="122" x="222" y="10"></rect>
+<circle cx="321" cy="26" fill="currentColor" fill-opacity="0.32" r="6" stroke="none"></circle>
+<path d="M231 58L258 34L277 48L294 30L335 58Z" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-opacity="0.38" stroke-width="1.2"></path>
+<path d="M231 58H335" stroke-opacity="0.30" stroke-width="1.1"></path>
+<!-- Generated text -->
+<rect fill="#ffffff" fill-opacity="0.82" height="51" rx="10" stroke="currentColor" stroke-opacity="0.20" width="122" x="222" y="78"></rect>
+<text fill="currentColor" fill-opacity="0.72" font-family="Charis SIL, Charter, Bitstream Charter, XCharter, Georgia, serif" font-size="8.5" font-style="italic" stroke="none" x="235" y="94">“A new idea begins...”</text>
+<path d="M235 104H328M235 114H313M235 123H287" stroke-opacity="0.30" stroke-width="2.1"></path>
+</g>
+</svg></div>
+</header>
+<div class="research-question">
+<strong>Main question</strong>
+          What properties of a data distribution make efficient learning to sample possible?
+        </div>
+<div class="research-topics">
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Language Generation</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2411.09642" rel="noopener noreferrer" target="_blank">
+                    On the Limits of Language Generation: Trade-Offs Between Hallucination and Mode Collapse
+                  </a><br/>
+<span class="research-venue">STOC 2025</span>
+</li>
+</ul>
+</section>
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Diffusion Models</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2504.05161" rel="noopener noreferrer" target="_blank">
+                    DDPM Score Matching and Distribution Learning
+                  </a><br/>
+<span class="research-venue">COLT 2026</span>
+</li>
+</ul>
+</section>
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Neural Combinatorial Optimization</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2310.05309.pdf" rel="noopener noreferrer" target="_blank">
+                    Optimizing Solution-Samplers for Combinatorial Problems: The Landscape of Policy-Gradient Methods
+                  </a><br/>
+<span class="research-venue">NeurIPS 2023 </span>
+</li>
+</ul>
+</section>
+</div>
+</article>
+<!-- Statistical Physics -->
+<article class="research-card research-card--physics">
+<header class="research-card-header">
+<div class="research-title-row">
+<h3>Computation in Physical Systems</h3>
+</div>
+<p class="research-card-motivation">
+            Statistical physics models provide a rich setting for studying
+            computational questions arising in machine learning, including sampling and inference.
+          </p><div aria-hidden="true" class="research-visual"><svg role="img" viewbox="0 0 320 120"><g fill="none" stroke="currentColor" stroke-width="1.65"><g opacity="0.32"><path d="M54 59L92 25L145 41L176 18L224 42L270 28"></path><path d="M54 59L92 94L145 78L176 103L224 77L270 91"></path><path d="M92 25L92 94M145 41L145 78M176 18L176 103M224 42L224 77M270 28L270 91"></path><path d="M92 25L145 78M145 41L92 94M145 41L224 77M176 18L224 77M176 103L224 42M224 42L270 91"></path></g><g fill="currentColor" stroke="none"><circle cx="54" cy="59" opacity="0.62" r="7"></circle><circle cx="92" cy="25" opacity="0.42" r="6"></circle><circle cx="92" cy="94" opacity="0.72" r="6"></circle><circle cx="145" cy="41" opacity="0.72" r="7"></circle><circle cx="145" cy="78" opacity="0.42" r="7"></circle><circle cx="176" cy="18" opacity="0.52" r="6"></circle><circle cx="176" cy="103" opacity="0.72" r="6"></circle><circle cx="224" cy="42" opacity="0.42" r="7"></circle><circle cx="224" cy="77" opacity="0.78" r="7"></circle><circle cx="270" cy="28" opacity="0.68" r="6"></circle><circle cx="270" cy="91" opacity="0.46" r="6"></circle></g></g></svg></div>
+</header>
+<div class="research-question">
+<strong>Main question</strong>
+          What is the complexity of inverse problems in statistical physics models?
+        </div>
+<div class="research-topics">
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Inference for Graphical Models</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2311.03332.pdf" rel="noopener noreferrer" target="_blank">
+                    Learning Hard-Constrained Models with One Sample
+                  </a><br/>
+<span class="research-venue">SODA 2024</span>
+</li>
+</ul>
+</section>
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Sampling Graphical Models</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2407.07645.pdf" rel="noopener noreferrer" target="_blank">
+                    On Sampling from Ising Models with Spectral Constraints
+                  </a><br/>
+<span class="research-venue">RANDOM 2024</span>
+</li>
+</ul>
+</section>
+</div>
+</article>
+<!-- Broader Learning Theory -->
+<article class="research-card research-card--theory">
+<header class="research-card-header">
+<div class="research-title-row">
+<h3>Broader Learning Theory</h3>
+</div>
+<p class="research-card-motivation">
+            Learning theory seeks principles that characterize statistical and
+            computational complexity across learning tasks. 
+          </p>
+</header>
+<div class="research-question">
+<strong>Main question</strong>
+          How many samples and time are required for a particular learning task?
+        </div>
+<div class="research-topics">
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">PAC &amp; Online Learning</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2307.03848.pdf" rel="noopener noreferrer" target="_blank">
+                    Optimal Learners for Realizable Regression: PAC Learning and Online Learning
+                  </a><br/>
+<span class="research-venue">NeurIPS 2023</span>
+</li>
+</ul>
+</section>
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Distribution Learning</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2601.05157" rel="noopener noreferrer" target="_blank">
+                    Learning Mixture Models via Efficient High-Dimensional Sparse Fourier Transforms
+                  </a><br/>
+<span class="research-venue">STOC 2026</span>
+</li>
+</ul>
+</section>
+</div>
+</article>
+<!-- Earlier Research Directions -->
+<article class="research-card research-card--earlier">
+<header class="research-card-header">
+<div class="research-title-row">
+<h3>Other Research Directions</h3>
+</div>
+<p class="research-card-motivation">
+            Some earlier research directions include the questions of (i) what does it mean for an algorithm to be replicable? What is the cost of replicability as a property of the algorithm?
+            and (ii) what is the complexity of reaching equilibria in multi-agent settings? 
+           </p>
+</header>
+<div class="research-topics">
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Replicability &amp; Stability</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2305.14311.pdf" rel="noopener noreferrer" target="_blank">
+                    Statistical Indistinguishability of Learning Algorithms
+                  </a><br/>
+<span class="research-venue">ICML 2023</span>
+</li>
+</ul>
+</section>
+<section class="research-topic"><div class="research-topic-heading"><h4 class="research-topic-title">Learning in Games</h4></div>
+<ul class="research-paper-list">
+<li>
+<a href="https://arxiv.org/pdf/2311.14869.pdf" rel="noopener noreferrer" target="_blank">
+                    On the Complexity of Computing Sparse Equilibria and Lower Bounds for No-Regret Learning in Games
+                  </a><br/>
+<span class="research-venue">ITCS 2024</span>
+</li>
+</ul>
+</section>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- PUBLICATIONS -->
+<section class="py-5" id="publications">
+<div class="container">
+<section class="py-5" id="publications">
+<div class="container">
+<h2 class="section-title" id="pubs-title">
+<i class="fas fa-book-open"></i> Recent Papers
         </h2>
-
-        
-        <ul class="publication-list" style="list-style: none; padding-left: 0;">
-          <!-- Selected papers -->
-          
-          <li class="publication-item">
-        <div class="publication-title">
-          <a href="https://arxiv.org/pdf/2504.05161?" target="_blank" rel="noopener noreferrer">
+<ul class="publication-list" style="list-style: none; padding-left: 0;">
+<!-- Selected papers -->
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2504.05161?" rel="noopener noreferrer" target="_blank">
             DDPM Score Matching and Distribution Learning
           </a>
-           <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">COLT 2026</span>
-        </div>
-        <div class="publication-authors">
-          with Sinho Chewi, Anay Mehrotra and Omar Montasser<br>
-          <span style="color: rgb(128, 0, 0); font-size: small; font-weight: bold; margin-left: auto;">Short Best Paper Award @ ICLR 2025 Workshop on Deep Generative Models in Machine Learning</span>
-        </div>
-      </li>
-
-          <li class="publication-item">
-        <div class="publication-title">
-          <a href="https://arxiv.org/pdf/2504.07133?" target="_blank" rel="noopener noreferrer">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">COLT 2026</span>
+</div>
+<div class="publication-authors">
+          with Sinho Chewi, Anay Mehrotra and Omar Montasser<br/>
+<span style="color: rgb(128, 0, 0); font-size: small; font-weight: bold; margin-left: auto;">Short Best Paper Award @ ICLR 2025 Workshop on Deep Generative Models in Machine Learning</span>
+</div>
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2504.07133?" rel="noopener noreferrer" target="_blank">
             Can SGD Select Good Fishermen? Local Convergence under Self-Selection Biases and Beyond
           </a>
-          <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">COLT 2026</span>
-        </div>
-        <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">COLT 2026</span>
+</div>
+<div class="publication-authors">
           with Anay Mehrotra and Felix Zhou
         </div>
-      </li>
-
-              <li class="publication-item">
-        <div class="publication-title">
-          <a href="https://arxiv.org/pdf/2602.12534" target="_blank" rel="noopener noreferrer">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2602.12534" rel="noopener noreferrer" target="_blank">
             Linear Regression with Unknown Truncation Beyond Gaussian Features
           </a>
-          <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">ICML 2026</span>
-        </div>
-        <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">ICML 2026</span>
+</div>
+<div class="publication-authors">
           with Alexandros Kouridakis, Anay Mehrotra and Constantine Caramanis
         </div>
-      </li>
-          
-           <li class="publication-item">
-            <div class="publication-title">
-              <a href="https://arxiv.org/pdf/2601.05157" target="_blank" rel="noopener noreferrer">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2601.05157" rel="noopener noreferrer" target="_blank">
                 Learning Mixture Models via Efficient High-dimensional Sparse Fourier Transforms
               </a>
-              <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">STOC 2026</span>
-            </div>
-            <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">STOC 2026</span>
+</div>
+<div class="publication-authors">
               with Pravesh Kothari, Shuchen Li and Manolis Zampetakis
             </div>
-          </li>
-
-           <li class="publication-item">
-            <div class="publication-title">
-              <a href="" target="_blank" rel="noopener noreferrer">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="" rel="noopener noreferrer" target="_blank">
                 On the Learning Curves of Revenue Maximization
               </a>
-              <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">STOC 2026</span>
-            </div>
-            <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">STOC 2026</span>
+</div>
+<div class="publication-authors">
               with Steve Hanneke, Shay Moran and Grigoris Velegkas
             </div>
-          </li>
-
-          <li class="publication-item">
-            <div class="publication-title">
-              <a href="" target="_blank" rel="noopener noreferrer">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="" rel="noopener noreferrer" target="_blank">
                 Mean Estimation from Coarse Data: Characterizations and Efficient Algorithms
               </a>
-              <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">ICLR 2026</span>
-            </div>
-            <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">ICLR 2026</span>
+</div>
+<div class="publication-authors">
               with Anay Mehrotra, Manolis Zampetakis, Felix Zhou and Ziyu Zhu
             </div>
-          </li>
-
-           <li class="publication-item">
-                  <div class="publication-title">
-                    <a href="https://arxiv.org/pdf/2412.18530" target="_blank" rel="noopener noreferrer">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2412.18530" rel="noopener noreferrer" target="_blank">
                       On Characterizations for Language Generation: Interplay of Hallucinations, Breadth, and Stability
                     </a>
-                     <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">ALT 2026</span>
-                  </div>
-                  <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">ALT 2026</span>
+</div>
+<div class="publication-authors">
                     with Anay Mehrotra and Grigoris Velegkas
                   </div>
-                </li>
-          
-          <li class="publication-item" style="display: flex; flex-direction: column;">
-            <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-              <div>
-                <a href="https://arxiv.org/pdf/2506.04194" target="_blank" rel="noopener noreferrer" style="font-size: medium;">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<div>
+<a href="https://arxiv.org/pdf/2506.04194" rel="noopener noreferrer" style="font-size: medium;" target="_blank">
                   What Makes Treatment Effects Identifiable? Characterizations and Estimators Beyond Unconfoundedness
                 </a>
-              </div>
-              <span class="publication-conf" style="color: green; font-size: medium;">COLT 2025</span>
-            </div>
-          
-            <div class="publication-authors" style="display: flex; justify-content: space-between;">
-              <div>with Yang Cai, Katerina Mamali, Anay Mehrotra and Manolis Zampetakis</div>
-              <span class="publication-conf" style="color: rgb(128, 0, 0); font-size: large; display: flex; align-items: center; gap: 0.4rem;">
-                <i class="fas fa-trophy" style="color: rgb(128, 0, 0);"></i>
-                <strong>Best Paper Award</strong>
-              </span>
-            </div>
-          </li>
-
-            
-
-    
-          <li class="publication-item">
-            <div class="publication-title">
-              <a href="https://arxiv.org/pdf/2502.21278?" target="_blank" rel="noopener noreferrer">
+</div>
+<span class="publication-conf" style="color: green; font-size: medium;">COLT 2025</span>
+</div>
+<div class="publication-authors" style="display: flex; justify-content: space-between;">
+<div>with Yang Cai, Katerina Mamali, Anay Mehrotra and Manolis Zampetakis</div>
+<span class="publication-conf" style="color: rgb(128, 0, 0); font-size: large; display: flex; align-items: center; gap: 0.4rem;">
+<i class="fas fa-trophy" style="color: rgb(128, 0, 0);"></i>
+<strong>Best Paper Award</strong>
+</span>
+</div>
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2502.21278?" rel="noopener noreferrer" target="_blank">
                 Does Generation Require Memorization? Creative Diffusion Models using Ambient Diffusion
               </a>
-              <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">ICML 2025</span>
-            </div>
-            <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">ICML 2025</span>
+</div>
+<div class="publication-authors">
               with Kulin Shah, Adam Klivans and Giannis Daras
             </div>
-          </li>
-    
-          <li class="publication-item">
-            <div class="publication-title">
-              <a href="https://arxiv.org/pdf/2411.09642" target="_blank" rel="noopener noreferrer">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2411.09642" rel="noopener noreferrer" target="_blank">
                 On the Limits of Language Generation: Trade-Offs Between Hallucination and Mode Collapse
               </a>
-              <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">STOC 2025</span>
-            </div>
-            <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">STOC 2025</span>
+</div>
+<div class="publication-authors">
               with Anay Mehrotra and Grigoris Velegkas
             </div>
-          </li>
-
-       
-      </ul>
-    
-        <!-- Hidden full list -->
-        <div id="all-pubs" style="display: none;">
-          <ul class="publication-list" style="list-style: none; padding-left: 0; margin-top: 1rem;">
-          
-            
-             <li class="publication-item">
-          <div class="publication-title">
-            <a href="https://dl.acm.org/doi/pdf/10.1145/3717823.3718250" target="_blank" rel="noopener noreferrer">Computational Lower Bounds for No-Regret Learning in Normal-Form Games
+</li>
+</ul>
+<!-- Hidden full list -->
+<div id="all-pubs" style="display: none;">
+<ul class="publication-list" style="list-style: none; padding-left: 0; margin-top: 1rem;">
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://dl.acm.org/doi/pdf/10.1145/3717823.3718250" rel="noopener noreferrer" target="_blank">Computational Lower Bounds for No-Regret Learning in Normal-Form Games
             </a>
-            <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">STOC 2025</span>
-          </div>
-          <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size:medium;">STOC 2025</span>
+</div>
+<div class="publication-authors">
             with Ioannis Anagnostides and Tuomas Sandholm
           </div>
-        </li>
-            
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://arxiv.org/pdf/2406.05660.pdf" target="_blank">Injecting Undetectable Backdoors in Obfuscated Neural Networks and Language Models</a>
-                <span class="publication-conf" style="color: green; font-size:medium;">NeurIPS 2024</span>
-              </div>
-              <div class="publication-authors">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://arxiv.org/pdf/2406.05660.pdf" target="_blank">Injecting Undetectable Backdoors in Obfuscated Neural Networks and Language Models</a>
+<span class="publication-conf" style="color: green; font-size:medium;">NeurIPS 2024</span>
+</div>
+<div class="publication-authors">
                 with Amin Karbasi, Argyris Oikonomou, Katerina Sotiraki, Grigoris Velegkas and Manolis Zampetakis
               </div>
-            </li>
-            
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://arxiv.org/pdf/2405.15599.pdf" target="_blank">On the Computational Landscape of Replicable Learning</a>
-                <span class="publication-conf" style="color: green; font-size: medium;">NeurIPS 2024</span>
-              </div>
-              <div class="publication-authors">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://arxiv.org/pdf/2405.15599.pdf" target="_blank">On the Computational Landscape of Replicable Learning</a>
+<span class="publication-conf" style="color: green; font-size: medium;">NeurIPS 2024</span>
+</div>
+<div class="publication-authors">
                 with Amin Karbasi, Grigoris Velegkas and Felix Zhou
               </div>
-            </li>
-            
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://arxiv.org/pdf/2407.07645.pdf" target="_blank">On Sampling from Ising Models with Spectral Constraints</a>
-                <span class="publication-conf" style="color: green; font-size: medium;">RANDOM 2024</span>
-              </div>
-              <div class="publication-authors">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://arxiv.org/pdf/2407.07645.pdf" target="_blank">On Sampling from Ising Models with Spectral Constraints</a>
+<span class="publication-conf" style="color: green; font-size: medium;">RANDOM 2024</span>
+</div>
+<div class="publication-authors">
                 with Andreas Galanis and Anthimos Vardis Kandiros
               </div>
-            </li>
-            
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://arxiv.org/pdf/2410.01658.pdf" target="_blank">Smaller Confidence Intervals From IPW Estimators via Data-Dependent Coarsening</a>
-                <span class="publication-conf" style="color: green; font-size: medium;">COLT 2024</span>
-              </div>
-              <div class="publication-authors">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://arxiv.org/pdf/2410.01658.pdf" target="_blank">Smaller Confidence Intervals From IPW Estimators via Data-Dependent Coarsening</a>
+<span class="publication-conf" style="color: green; font-size: medium;">COLT 2024</span>
+</div>
+<div class="publication-authors">
                 with Anay Mehrotra and Manolis Zampetakis
               </div>
-            </li>
-            
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://proceedings.mlr.press/v247/attias24a/attias24a.pdf" target="_blank">Universal Rates for Real-Valued Regression: Separations between Cut-Off and Absolute Loss</a>
-                <span class="publication-conf" style="color: green; font-size: medium;">COLT 2024</span>
-              </div>
-              <div class="publication-authors">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://proceedings.mlr.press/v247/attias24a/attias24a.pdf" target="_blank">Universal Rates for Real-Valued Regression: Separations between Cut-Off and Absolute Loss</a>
+<span class="publication-conf" style="color: green; font-size: medium;">COLT 2024</span>
+</div>
+<div class="publication-authors">
                 with Idan Attias, Steve Hanneke, Amin Karbasi and Grigoris Velegkas
               </div>
-            </li>
-            
-        
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <div>
-                  <a href="https://arxiv.org/pdf/2402.13857.pdf" target="_blank">Replicable Learning of Large-Margin Halfspaces</a>
-                </div>
-                <span class="publication-conf" style="color: green; font-size: medium;">ICML 2024</span>
-              </div>
-              <div class="publication-authors" style="display: flex; justify-content: space-between;">
-                <div>with Amin Karbasi, Kasper Green Larsen, Grigoris Velegkas and Felix Zhou</div>
-                <span class="publication-conf" style="color: rgb(128, 0, 0); font-size: large;"> Selected as Spotlight</span>
-              </div>
-            </li>
-            
-        
-            <li class="publication-item">
-              <div class="publication-title">
-                <a href="https://arxiv.org/pdf/2311.14869.pdf" target="_blank" style="font-size: medium;">On the Complexity of Computing Sparse Equilibria and Lower Bounds for No-Regret Learning in Games</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">ITCS 2024</span>
-              </div>
-              <div class="publication-authors">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<div>
+<a href="https://arxiv.org/pdf/2402.13857.pdf" target="_blank">Replicable Learning of Large-Margin Halfspaces</a>
+</div>
+<span class="publication-conf" style="color: green; font-size: medium;">ICML 2024</span>
+</div>
+<div class="publication-authors" style="display: flex; justify-content: space-between;">
+<div>with Amin Karbasi, Kasper Green Larsen, Grigoris Velegkas and Felix Zhou</div>
+<span class="publication-conf" style="color: rgb(128, 0, 0); font-size: large;"> Selected as Spotlight</span>
+</div>
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2311.14869.pdf" style="font-size: medium;" target="_blank">On the Complexity of Computing Sparse Equilibria and Lower Bounds for No-Regret Learning in Games</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">ITCS 2024</span>
+</div>
+<div class="publication-authors">
                 with Ioannis Anagnostides, Tuomas Sandholm and Manolis Zampetakis
               </div>
-            </li>
-        
-            <li class="publication-item">
-              <div class="publication-title">
-                <a href="https://arxiv.org/pdf/2311.03332.pdf" target="_blank">Learning Hard-Constrained Models with One Sample</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">SODA 2024</span>
-              </div>
-              <div class="publication-authors">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2311.03332.pdf" target="_blank">Learning Hard-Constrained Models with One Sample</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">SODA 2024</span>
+</div>
+<div class="publication-authors">
                 with Andreas Galanis and Anthimos Vardis Kandiros
               </div>
-            </li>
-        
-        
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://arxiv.org/pdf/2310.05309.pdf" target="_blank" style="font-size: medium;">Optimizing Solution-Samplers for Combinatorial Problems: The Landscape of Policy-Gradient Methods</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">NeurIPS 2023</span>
-              </div>
-              <div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://arxiv.org/pdf/2310.05309.pdf" style="font-size: medium;" target="_blank">Optimizing Solution-Samplers for Combinatorial Problems: The Landscape of Policy-Gradient Methods</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">NeurIPS 2023</span>
+</div>
+<div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
                 with Constantine Caramanis, Dimitris Fotakis, Vasilis Kontonis and Christos Tzamos
                 <span style="color: rgb(128, 0, 0); font-size: large; font-weight: bold; margin-left: auto;">Selected as Oral</span>
-              </div>
-            </li>
-        
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://arxiv.org/pdf/2307.03848.pdf" target="_blank" style="font-size: medium;">
+</div>
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://arxiv.org/pdf/2307.03848.pdf" style="font-size: medium;" target="_blank">
                   Optimal Learners for Realizable Regression: PAC Learning and Online Learning
                 </a>
-                <span class="publication-conf" style="color: green; font-size: medium;">NeurIPS 2023</span>
-              </div>
-              <div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <div>with Idan Attias, Steve Hanneke, Amin Karbasi and Grigoris Velegkas</div>
-                <span style="color: rgb(128, 0, 0); font-size: large; font-weight: bold; margin-left: auto;">Selected as Oral</span>
-              </div>
-            </li>
-            
-        
-            <li class="publication-item">
-              <div class="publication-title">
-                <a href="https://arxiv.org/pdf/2305.14311.pdf" target="_blank">Statistical Indistinguishability of Learning Algorithms</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">ICML 2023</span>
-              </div>
-              <div class="publication-authors">
+<span class="publication-conf" style="color: green; font-size: medium;">NeurIPS 2023</span>
+</div>
+<div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
+<div>with Idan Attias, Steve Hanneke, Amin Karbasi and Grigoris Velegkas</div>
+<span style="color: rgb(128, 0, 0); font-size: large; font-weight: bold; margin-left: auto;">Selected as Oral</span>
+</div>
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2305.14311.pdf" target="_blank">Statistical Indistinguishability of Learning Algorithms</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">ICML 2023</span>
+</div>
+<div class="publication-authors">
                 with Amin Karbasi, Shay Moran and Grigoris Velegkas
               </div>
-            </li>
-        
-            <li class="publication-item">
-              <div class="publication-title">
-                <a href="https://arxiv.org/pdf/2210.01898.pdf" target="_blank">Replicable Bandits</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">ICLR 2023</span>
-              </div>
-              <div class="publication-authors">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2210.01898.pdf" target="_blank">Replicable Bandits</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">ICLR 2023</span>
+</div>
+<div class="publication-authors">
                 with Hossein Esfandiari, Amin Karbasi, Andreas Krause, Vahab Mirrokni and Grigoris Velegkas
               </div>
-            </li>
-        
-            <li class="publication-item">
-              <div class="publication-title">
-                <a href="https://arxiv.org/pdf/2210.02297.pdf" target="_blank" style="font-size: medium;">Multiclass Learnability Beyond the PAC Framework: Universal Rates and Partial Concept Classes</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">NeurIPS 2022</span>
-              </div>
-              <div class="publication-authors">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2210.02297.pdf" style="font-size: medium;" target="_blank">Multiclass Learnability Beyond the PAC Framework: Universal Rates and Partial Concept Classes</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">NeurIPS 2022</span>
+</div>
+<div class="publication-authors">
                 with Grigoris Velegkas and Amin Karbasi
               </div>
-            </li>
-        
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://arxiv.org/pdf/2210.13313.pdf" target="_blank" style="font-size: medium;">Learning and Covering Sums of Independent Random Variables with Unbounded Support</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">NeurIPS 2022</span>
-              </div>
-              <div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://arxiv.org/pdf/2210.13313.pdf" style="font-size: medium;" target="_blank">Learning and Covering Sums of Independent Random Variables with Unbounded Support</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">NeurIPS 2022</span>
+</div>
+<div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
                 with Konstantinos Stavropoulos and Manolis Zampetakis
                 <span style="color: rgb(128, 0, 0); font-size: large; font-weight: bold; margin-left: auto;">Selected as Oral</span>
-              </div>
-            </li>
-        
-            <li class="publication-item">
-              <div class="publication-title">
-                <a href="https://arxiv.org/pdf/2211.12868.pdf" target="_blank">Perfect Sampling from Pairwise Comparisons</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">NeurIPS 2022</span>
-              </div>
-              <div class="publication-authors">
+</div>
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2211.12868.pdf" target="_blank">Perfect Sampling from Pairwise Comparisons</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">NeurIPS 2022</span>
+</div>
+<div class="publication-authors">
                 with Dimitris Fotakis and Christos Tzamos
               </div>
-            </li>
-        
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://openreview.net/pdf?id=dgWo-UyVEsa" target="_blank">Linear Label Ranking with Bounded Noise</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">NeurIPS 2022</span>
-              </div>
-              <div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://openreview.net/pdf?id=dgWo-UyVEsa" target="_blank">Linear Label Ranking with Bounded Noise</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">NeurIPS 2022</span>
+</div>
+<div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
                 with Dimitris Fotakis, Vasilis Kontonis and Christos Tzamos
                 <span style="color: rgb(128, 0, 0); font-size: large; font-weight: bold; margin-left: auto;">Selected as Oral</span>
-              </div>
-            </li>
-        
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://arxiv.org/pdf/2111.02749.pdf" target="_blank">Label Ranking through Nonparametric Regression</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">ICML 2022</span>
-              </div>
-              <div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
+</div>
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://arxiv.org/pdf/2111.02749.pdf" target="_blank">Label Ranking through Nonparametric Regression</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">ICML 2022</span>
+</div>
+<div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
                 with Dimitris Fotakis and Eleni Psaroudaki
                 <span style="color: rgb(128, 0, 0); font-size: large; font-weight: bold; margin-left: auto;">Selected for Long Presentation</span>
-              </div>
-            </li>
-        
-            <li class="publication-item">
-              <div class="publication-title">
-                <a href="https://arxiv.org/pdf/2202.11199.pdf" target="_blank">Differentially Private Regression with Unbounded Covariates</a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">AISTATS 2022</span>
-              </div>
-              <div class="publication-authors">
+</div>
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2202.11199.pdf" target="_blank">Differentially Private Regression with Unbounded Covariates</a>
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">AISTATS 2022</span>
+</div>
+<div class="publication-authors">
                 with Jason Milionis, Dimitris Fotakis and Stratis Ioannidis
               </div>
-            </li>
-
-            <li class="publication-item">
-              <div class="publication-title">
-                <a href="https://arxiv.org/pdf/2108.09805.pdf" target="_blank" style="font-size: medium;">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2108.09805.pdf" style="font-size: medium;" target="_blank">
                   Efficient Algorithms for Learning from Coarse Labels
                 </a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">COLT 2021</span>
-              </div>
-              <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">COLT 2021</span>
+</div>
+<div class="publication-authors">
                 with Dimitris Fotakis, Vasilis Kontonis and Christos Tzamos
               </div>
-            </li>
-            
-            <li class="publication-item">
-              <div class="publication-title">
-                <a href="https://arxiv.org/pdf/2011.00810.pdf" target="_blank" style="font-size: medium;">
+</li>
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2011.00810.pdf" style="font-size: medium;" target="_blank">
                   Aggregating Incomplete and Noisy Rankings
                 </a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">AISTATS 2021</span>
-              </div>
-              <div class="publication-authors">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">AISTATS 2021</span>
+</div>
+<div class="publication-authors">
                 with Dimitris Fotakis and Konstantinos Stavropoulos
               </div>
-            </li>
-            
-            <li class="publication-item" style="display: flex; flex-direction: column;">
-              <div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
-                <a href="https://arxiv.org/pdf/2007.02392.pdf" target="_blank" style="font-size: medium;">
+</li>
+<li class="publication-item" style="display: flex; flex-direction: column;">
+<div class="publication-title" style="display: flex; justify-content: space-between; align-items: baseline;">
+<a href="https://arxiv.org/pdf/2007.02392.pdf" style="font-size: medium;" target="_blank">
                   Efficient Parameter Estimation of Truncated Boolean Product Distributions
                 </a>
-                <span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">COLT 2020</span>
-              </div>
-              <div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
+<span class="publication-conf" style="color: green; margin-left: 0.5rem; font-size: medium;">COLT 2020</span>
+</div>
+<div class="publication-authors" style="display: flex; justify-content: space-between; align-items: baseline;">
                 with Dimitris Fotakis and Christos Tzamos
                 <span style="color: rgb(128, 0, 0); font-size: large; font-weight: bold; margin-left: auto;">Algorithmica 2022</span>
-              </div>
-            </li>
-            
-          </ul>
-        </div>
-        
-    
-        <!-- Toggle button -->
-        <div style="text-align: center; margin-top: 1rem;">
-          <button id="toggle-pubs-btn" onclick="togglePublications()" style="border: none; background: none; color: #007BFF; font-size: 1rem; cursor: pointer;">
+</div>
+</li>
+</ul>
+</div>
+<!-- Toggle button -->
+<div style="text-align: center; margin-top: 1rem;">
+<button id="toggle-pubs-btn" onclick="togglePublications()" style="border: none; background: none; color: #007BFF; font-size: 1rem; cursor: pointer;">
             Show all
           </button>
-        </div>
-      </div>
-    </section>
-    
-    <script>
+</div>
+</div>
+</section>
+<script>
       function togglePublications() {
         const allPubs = document.getElementById("all-pubs");
         const toggleBtn = document.getElementById("toggle-pubs-btn");
@@ -796,8 +1547,7 @@
           : '<i class="fas fa-book-open"></i> Recent Publications';
       }
     </script>
-    
-    <style>
+<style>
       :root {
         --link: #00356B;        /* Your chosen deep blue */
         --link-hover: #001F3F;  /* Slightly darker shade for hover */
@@ -862,84 +1612,72 @@
         line-height: 1.3;
       }
     </style>
-    
-
-
 <!-- Preprints -->
 <section class="py-5" id="preprints">
-  <div class="container">
-    <h2 id="pubs-title" class="section-title">
-      <i class="fas fa-book-open"></i> Pre-prints
+<div class="container">
+<h2 class="section-title" id="pubs-title">
+<i class="fas fa-book-open"></i> Pre-prints
     </h2>
-    <ul class="publication-list" style="list-style:none; padding-left: 0;">
-    
-      
-
-     
-
-      <li class="publication-item">
-        <div class="publication-title">
-          <a href="https://arxiv.org/pdf/2403.11963.pdf" target="_blank" rel="noopener noreferrer">
+<ul class="publication-list" style="list-style:none; padding-left: 0;">
+<li class="publication-item">
+<div class="publication-title">
+<a href="https://arxiv.org/pdf/2403.11963.pdf" rel="noopener noreferrer" target="_blank">
             Transfer Learning Beyond Bounded Density Ratios
           </a>
-        </div>
-        <div class="publication-authors">
+</div>
+<div class="publication-authors">
           with Ilias Zadik and Manolis Zampetakis
         </div>
-      </li>
-    </ul>
-  </div>
-  </section>
-
- <!-- TEACHING -->
- <section class="py-5" id="teaching">
-  <div class="container">
-    <h2 class="section-title">
-      <i class="fas fa-chalkboard-teacher"></i> Teaching
-    </h2>
-
-    <!-- Course Card -->
-    <div class="card shadow-sm p-4 mb-4" style="background-color: #f8f9fa; border-left: 5px solid #00356B;">
-      <h4 class="mb-2" style="color: #00356B;">Stability in Machine Learning: Generalization, Privacy & Replicability</h4>
-      <p>Instructor: Alkis Kalavasis</p>
-      <p>This course is about generalization and stability of Machine Learning (ML) systems. There are various ways to define what it means for a learning algorithm to be stable. The most standard way is inspired by sensitivity analysis, which aims at determining how much the variation of the input can influence the output of a system. This abstract way allows one to introduce various notions of stability such as uniform stability, differential privacy, and replicability. In this course, we investigate these notions of stability, their implications to learning theory, and their surprising connections.</p>
-      <a href="https://docs.google.com/viewerng/viewer?url=https://raw.githubusercontent.com/AlkisK/AlkisK.github.io/master/_teaching/stability_notes.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-        <i class="fas fa-book fa-lg" style="color: #00356B;"></i> <strong>Lecture Notes (PDF)</strong>
-      </a>
-    <ul class="simple-list">
-      <li>
-        <strong> Weekly Lectures – Spring 2025 (Yale CPSC 683)</strong>
-        <button class="btn btn-sm btn-outline-primary ml-2 toggle-btn" aria-expanded="false" aria-controls="stability-list" aria-label="Toggle lectures">
-          <i class="fas fa-plus"></i>
-        </button>
-
-        <ul class="lecture-list mt-2" id="stability-list" style="display:none; list-style: disc inside; padding-left: 1rem;">
-          <li><a>Lecture 1 (VC Theory and Uniform Convergence) (Jan 14)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_1.pdf">[PDF]</a></li>
-          <li><a>Lecture 2 (Generalization Bounds via Algorithmic Stability) (Jan 21)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_2.pdf">[PDF]</a></li>
-          <li><a>Lecture 3 (Stability of SGD and Randomization Tests) (Jan 28)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_3.pdf">[PDF]</a></li>
-          <li><a>Lecture 4 (Uniform Convergence Failures and Domain Adaptation) (Feb 4)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_4.pdf">[PDF]</a></li>
-          <li><a>Lecture 5 (Online and Private PAC Learning) (Feb 11)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_5.pdf">[PDF]</a></li>
-          <li><a>Lecture 6 (DP PAC Learning implies Online Learning) (Feb 18)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_6.pdf">[PDF]</a></li>
-          <li><a>Lecture 7 (Online Learning implies DP PAC Learning) (Feb 25)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_7.pdf">[PDF]</a></li>
-          <li><a>Lecture 8 (Replicable and DP PAC Learning) (Mar 4)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_8.pdf">[PDF]</a></li>
-          <li><a>Spring Break (Mar 11, Mar 18)</a></li>
-          <li><a>Lecture 9 (Memorization, Learning, and Generative Models) (Mar 25)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_9.pdf">[PDF]</a></li>
-          <li><a>Lecture 10 (A Theory of Learning Curves) (Apr 1)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_10.pdf">[PDF]</a></li>
-          <li><a>Lecture 11 (Language Identification and Generation) (Apr 8)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_11.pdf">[PDF]</a></li>
-          <li>
-            <a>Lecture 12 (Diffusion Models) (Apr 15)</a> – 
-            <a href="https://arxiv.org/pdf/2209.11215">[Paper 1]</a> 
-            <a href="https://arxiv.org/pdf/2504.05161?">[Paper 2]</a>
-          </li>
-          <li><a>Lecture 13 (Student Presentations) (Apr 29)</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+</li>
+</ul>
 </div>
-
-  <!-- Toggle Script -->
-  <script>
+</section>
+<!-- TEACHING -->
+<section class="py-5" id="teaching">
+<div class="container">
+<h2 class="section-title">
+<i class="fas fa-chalkboard-teacher"></i> Teaching
+    </h2>
+<!-- Course Card -->
+<div class="card shadow-sm p-4 mb-4" style="background-color: #f8f9fa; border-left: 5px solid #00356B;">
+<h4 class="mb-2" style="color: #00356B;">Stability in Machine Learning: Generalization, Privacy &amp; Replicability</h4>
+<p>Instructor: Alkis Kalavasis</p>
+<p>This course is about generalization and stability of Machine Learning (ML) systems. There are various ways to define what it means for a learning algorithm to be stable. The most standard way is inspired by sensitivity analysis, which aims at determining how much the variation of the input can influence the output of a system. This abstract way allows one to introduce various notions of stability such as uniform stability, differential privacy, and replicability. In this course, we investigate these notions of stability, their implications to learning theory, and their surprising connections.</p>
+<a href="https://docs.google.com/viewerng/viewer?url=https://raw.githubusercontent.com/AlkisK/AlkisK.github.io/master/_teaching/stability_notes.pdf" rel="noopener noreferrer" style="text-decoration: none;" target="_blank">
+<i class="fas fa-book fa-lg" style="color: #00356B;"></i> <strong>Lecture Notes (PDF)</strong>
+</a>
+<ul class="simple-list">
+<li>
+<strong> Weekly Lectures – Spring 2025 (Yale CPSC 683)</strong>
+<button aria-controls="stability-list" aria-expanded="false" aria-label="Toggle lectures" class="btn btn-sm btn-outline-primary ml-2 toggle-btn">
+<i class="fas fa-plus"></i>
+</button>
+<ul class="lecture-list mt-2" id="stability-list" style="display:none; list-style: disc inside; padding-left: 1rem;">
+<li><a>Lecture 1 (VC Theory and Uniform Convergence) (Jan 14)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_1.pdf">[PDF]</a></li>
+<li><a>Lecture 2 (Generalization Bounds via Algorithmic Stability) (Jan 21)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_2.pdf">[PDF]</a></li>
+<li><a>Lecture 3 (Stability of SGD and Randomization Tests) (Jan 28)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_3.pdf">[PDF]</a></li>
+<li><a>Lecture 4 (Uniform Convergence Failures and Domain Adaptation) (Feb 4)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_4.pdf">[PDF]</a></li>
+<li><a>Lecture 5 (Online and Private PAC Learning) (Feb 11)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_5.pdf">[PDF]</a></li>
+<li><a>Lecture 6 (DP PAC Learning implies Online Learning) (Feb 18)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_6.pdf">[PDF]</a></li>
+<li><a>Lecture 7 (Online Learning implies DP PAC Learning) (Feb 25)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_7.pdf">[PDF]</a></li>
+<li><a>Lecture 8 (Replicable and DP PAC Learning) (Mar 4)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_8.pdf">[PDF]</a></li>
+<li><a>Spring Break (Mar 11, Mar 18)</a></li>
+<li><a>Lecture 9 (Memorization, Learning, and Generative Models) (Mar 25)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_9.pdf">[PDF]</a></li>
+<li><a>Lecture 10 (A Theory of Learning Curves) (Apr 1)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_10.pdf">[PDF]</a></li>
+<li><a>Lecture 11 (Language Identification and Generation) (Apr 8)</a> – <a href="https://github.com/AlkisK/AlkisK.github.io/blob/master/_teaching/stability_lecture_11.pdf">[PDF]</a></li>
+<li>
+<a>Lecture 12 (Diffusion Models) (Apr 15)</a> – 
+            <a href="https://arxiv.org/pdf/2209.11215">[Paper 1]</a>
+<a href="https://arxiv.org/pdf/2504.05161?">[Paper 2]</a>
+</li>
+<li><a>Lecture 13 (Student Presentations) (Apr 29)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- Toggle Script -->
+<script>
     document.querySelectorAll('.toggle-btn').forEach(button => {
       button.addEventListener('click', () => {
         const isExpanded = button.getAttribute('aria-expanded') === 'true';
@@ -957,18 +1695,15 @@
     });
   </script>
 </section>
-
-
-
 <!--TALKS-->
-  <!-- <section class="py-5" id="talks">
+<!-- <section class="py-5" id="talks">
     <div class="container">
       <h2 class="section-title">
         <i class="fas fa-microphone"></i> Recent Talks
       </h2>
   
       <!-- Talks Card -->
-      <!-- <div class="card shadow-sm p-4 mb-4" style="background-color: #f8f9fa; border-left: 5px solid #00356B;">
+<!-- <div class="card shadow-sm p-4 mb-4" style="background-color: #f8f9fa; border-left: 5px solid #00356B;">
       
         <ul class="list-unstyled" style="line-height: 1.75;">
           
@@ -1011,54 +1746,43 @@
         </ul>
       </div>
     </div>
-  </section> --> 
-   
-
-  <!--Service-->
-  <section class="py-5" id="service">
-    <div class="container">
-      <h2 class="section-title">
-        <i class="fas fa-microphone"></i> Service
+  </section> -->
+<!--Service-->
+<section class="py-5" id="service">
+<div class="container">
+<h2 class="section-title">
+<i class="fas fa-microphone"></i> Service
       </h2>
-  
-      <!-- Talks Card -->
-      <div class="card shadow-sm p-4 mb-4" style="background-color: #f8f9fa; border-left: 5px solid #006b04;">
-      
-        <ul class="list-unstyled" style="line-height: 1.75;">
-          
-          <li class="mb-3">
-            <h4><strong>Organization</strong><br></h4>
-            <a href="https://anaymehrotra.com/reliableML/" style="font-size: large; font-style: normal; font-weight: 600;">Reliable ML with Unreliable Data (NeurIPS 2025 Workshop)</a>
-            <p style="font-style: oblique;">with Andrew Ilyas, Anay Mehrotra, and Manolis Zampetakis</p>
-          </li>
-         
-        </ul>
-      </div>
+<!-- Talks Card -->
+<div class="card shadow-sm p-4 mb-4" style="background-color: #f8f9fa; border-left: 5px solid #1f6f8b;">
+<ul class="list-unstyled" style="line-height: 1.75;">
+<li class="mb-3">
+<h4><strong>Organization</strong><br/></h4>
+<a href="https://anaymehrotra.com/reliableML/" style="font-size: large; font-style: normal; font-weight: 600;">Reliable ML with Unreliable Data (NeurIPS 2025 Workshop)</a>
+<p style="font-style: oblique;">with Andrew Ilyas, Anay Mehrotra, and Manolis Zampetakis</p>
+</li>
+</ul>
+<h4><strong>Reviewing</strong><br/></h4>
 
-      <div class="card shadow-sm p-4 mb-4" style="background-color: #f8f9fa; border-left: 5px solid #006b04;">
-      
-        <ul class="list-unstyled" style="line-height: 1.75;">
-          
-          <li class="mb-3">
-            <h4><strong>Reviewing</strong><br></h4>
-          </li>
-          <p> FOCS (2025, 2024), STOC (2026, 2025, 2024), COLT (2026, 2025), NeurIPS (2024, 2023, 2022, 2021), ICML (2023), AISTATS (2022, 2021), ICLR (2022), ITCS (2024) </p>
-          
-        </ul>
-      </div>
-    </div>
-  </section>
-   
-  <!-- Footer -->
-  <footer class="py-3 mt-5" style="background-color: #f1f3f5; text-align: center; font-size: 0.9rem; color: #555;">
-    <div class="container">
-      <p class="mb-0">
-        Thanks to <a href="https://anaymehrotra.com" target="_blank" style="text-decoration: none; font-weight: 600; color: #006b04;">
+<p>Area Chair: NeurIPS (2026)</p>
+
+
+<p>Reviewer: FOCS (2026, 2025, 2024), STOC (2026, 2025, 2024), COLT (2026, 2025), NeurIPS (2024, 2023, 2022, 2021), ICML (2023), AISTATS (2022, 2021), ICLR (2022), ITCS (2024)</p>
+
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-3 mt-5" style="background-color: #f1f3f5; text-align: center; font-size: 0.9rem; color: #555;">
+<div class="container">
+<p class="mb-0">
+        Thanks to <a href="https://anaymehrotra.com" style="text-decoration: none; font-weight: 600; color: #006b04;" target="_blank">
         Anay Mehrotra</a> for letting me build on the HTML of
-        <a href="https://anaymehrotra.com/reliableML/" target="_blank" style="text-decoration: none; font-weight: 600; color: #006b04;">
+        <a href="https://anaymehrotra.com/reliableML/" style="text-decoration: none; font-weight: 600; color: #006b04;" target="_blank">
           Reliable ML Workshop.</a>
-      </p>
-    </div>
-  </footer>
+</p>
+</div>
+</footer>
+</div></section>
 </body>
 </html>
